@@ -54,7 +54,7 @@ $ . scripts/start-airflow.sh
 
 The above instructions will download the sample data, create the IAM role, and set up your AIRFLOW_HOME to the current project's `airflow/` folder. **Some errors will show up, don't worry**. The fourth command sets the required variables and connections, as the AWS key. The last command starts the airflow UI.
 
-Then, navigate to `http://localhost:3000` in your browser and turn on the `upload_raw_data` DAG. It will create required buckets in S3 and upload all data downloaded before. After complete this DAG, turn on  `create_datalake` to start the ETL process. You can click in the DAG name to follow the process execution steps. Finally, CLEAN UP your resources using and start a Dash app using the commands below:
+Then, navigate to `http://localhost:3000` in your browser and turn on the `upload_raw_data` DAG. It will create required buckets in S3 and upload all data downloaded before. After complete this DAG, turn on  `create_datalake` to start the ETL process. You can click in the DAG name to follow the process execution steps. Finally, CLEAN UP your resources and start a Dash app using the commands below:
 
 ```shell
 $ . scripts/stop-ariflow.sh
