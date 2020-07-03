@@ -32,7 +32,7 @@ def get_s3_to_athena_dag(
     dag = DAG(f"{parent_dag_name}.{task_id}", **kwargs)
 
     s_s3 = f"s3://{Variable.get('S3_DATA_BUCKET_NAME')}/{s3_key}/"
-    s_output_s3 = f"s3://{Variable.get('S3_CODE_BUCKET_NAME')}/"
+    s_output_s3 = f"s3://{Variable.get('S3_CODES_BUCKET_NAME')}/"
 
     create_db = AWSAthenaOperator(
         task_id='Create_database',

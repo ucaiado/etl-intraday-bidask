@@ -81,7 +81,7 @@ start_operator = DummyOperator(task_id='Begin_execution',  dag=dag)
 
 create_s3_bucket2misc = S3CreateBucketOperator(
     task_id='Create_misc_bucket',
-    bucket_name=Variable.get('S3_CODE_BUCKET_NAME'),
+    bucket_name=Variable.get('S3_CODES_BUCKET_NAME'),
     aws_conn_id='aws_credentials',
     region_name='us-west-2',
     dag=dag
